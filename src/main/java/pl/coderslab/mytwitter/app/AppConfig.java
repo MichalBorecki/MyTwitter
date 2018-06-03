@@ -23,6 +23,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import pl.coderslab.mytwitter.converter.UserConverter;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "pl.coderslab.mytwitter")
@@ -73,9 +75,15 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		return localeResolver;
 	}
 
+	
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
+		registry.addConverter(getUserConverter());
+	}
 
+	@Bean
+	public UserConverter getUserConverter() {
+		return new UserConverter();
 	}
 
 }
