@@ -41,7 +41,7 @@
 		<div class="collapse navbar-collapse  w-100" id="collapsingNavbar">
 			<c:choose>
 
-				<c:when test="${(sessionScope.user == null) or (pageContext.request.requestURI.endsWith('/register.jsp'))}">
+				<c:when test="${(sessionScope.user == null) or (pageContext.request.requestURI.endsWith('/register.jsp')) or (sessionScope.user.id == 0)}">
 
 					<!-- Login/register -->
 					<ul class="navbar-nav w-100 justify-content-end">

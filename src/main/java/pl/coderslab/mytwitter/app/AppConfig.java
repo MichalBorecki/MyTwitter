@@ -74,7 +74,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		localeResolver.setDefaultLocale(new Locale("pl", "PL"));
 		return localeResolver;
 	}
-
 	
 	@Override
 	public void addFormatters(FormatterRegistry registry) {

@@ -53,7 +53,7 @@ public class MessageController {
 			return "message/addMessageForm";
 		}
 		messageRepo.save(message);
-		return "redirect:/message/all-send/" + message.getSender().getId();
+		return "redirect:/message/all-sent/" + message.getSender().getId();
 	}
 
 	

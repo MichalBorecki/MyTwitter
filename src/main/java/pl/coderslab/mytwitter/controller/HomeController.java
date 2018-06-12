@@ -75,8 +75,4 @@ public class HomeController {
 		return this.tweetRepo.findAllOrderByCreated();
 	}
 	
-//	@ModelAttribute("tweets")
-//	public List<Tweet> findAll() {
-//		return this.tweetRepo.findAll();
-//	}
 }

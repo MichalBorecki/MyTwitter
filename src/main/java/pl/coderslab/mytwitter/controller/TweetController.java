@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import pl.coderslab.mytwitter.entity.Comment;
@@ -70,7 +69,6 @@ public class TweetController {
 	public String updateJsp(@PathVariable long id, Model model, HttpServletRequest request) {
 		Tweet tweet = tweetRepo.findOne(id);
 		model.addAttribute(tweet);
-		System.out.println(tweet);
 		request.setAttribute("message", "Edit tweet:");
 		return "tweet/addTweetForm";
 	}
@@ -80,7 +78,6 @@ public class TweetController {
 	public String delete(@PathVariable long id, Model model, HttpServletRequest request) {
 		List<Comment> list = commentRepo.findAllByTweetId(id);
 		if (list != null) {
-			System.out.println(list + " < comment deleted");
 			commentRepo.delete(list);
 		}
 		tweetRepo.delete(id);
@@ -129,9 +126,9 @@ public class TweetController {
 	@GetMapping("/find/{term}")
 	public String findByTerm(@PathVariable String term, Model model, HttpServletRequest request) {
 		String termCorrected = term.replace("+", " ");
+		
 		List<Tweet> tweetsFound = tweetRepo.findTweetLike(termCorrected);
 		model.addAttribute("tweets", tweetsFound);
-		
 		
 		commentsQty(model);
 		

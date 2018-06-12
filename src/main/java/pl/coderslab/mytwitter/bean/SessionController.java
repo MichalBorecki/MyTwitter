@@ -1,4 +1,4 @@
-package pl.coderslab.mytwitter.bean;
+/*package pl.coderslab.mytwitter.bean;
 
 import javax.servlet.http.HttpSession;
 
@@ -13,3 +13,4 @@ public class SessionController {
 	    return attr.getRequest().getSession(true); // true means: allow create
 	}
 }
+*/
