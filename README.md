@@ -12,8 +12,12 @@
 
 
 ## Screenshots
+
+Mobile version: 
 <img src="https://i.imgur.com/2UJ3XPX.png" width="250" />  <img src="https://i.imgur.com/PhVPsNI.png" width="250" />  <img src="https://i.imgur.com/NEKz8v4.png" width="250" />
 
+
+Desktop version:
 <img src="https://i.imgur.com/PLE3Lvo.png" width="250" />  <img src="https://i.imgur.com/EmHzktV.png" width="250" />  <img src="https://i.imgur.com/GnseUvs.png" width="250" />
 
 
